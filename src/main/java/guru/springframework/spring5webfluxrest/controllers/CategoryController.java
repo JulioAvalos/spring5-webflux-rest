@@ -40,6 +40,7 @@ public class CategoryController {
         return categoryRepository.save(category);
     }
 
+    @ResponseStatus(HttpStatus.OK)
     @PatchMapping("/api/v1/categories/{id}")
     Mono<Category> patch(@PathVariable String id, @RequestBody Category category) {
 

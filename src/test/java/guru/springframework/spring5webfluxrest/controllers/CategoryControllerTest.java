@@ -89,7 +89,7 @@ public class CategoryControllerTest {
     @Test
     public void patchWithChanges() {
         given(categoryRepository.findById(anyString()))
-                .willReturn(Mono.just(Category.builder().build()));
+                .willReturn(Mono.just(Category.builder().description("Cat1").build()));
 
         given(categoryRepository.save(any(Category.class)))
                 .willReturn(Mono.just(Category.builder().build()));
